@@ -68,20 +68,20 @@ document.querySelector('.compliment')
 
       let resulta = '';
 
-      playerMove === karaKrusResulta ? resulta = 'Panalo!' : resulta = 'Talo';
+      playerMove === karaKrusResulta ? resulta = '<span style="font-weight: bold;">&#10004;</span> Panalo! <span style="font-weight: bold;">&#10004;</span>' : resulta = '<span style="font-weight: bold;">&#10006;</span> Talo <span style="font-weight: bold;">&#10006;</span>';
       
-      if (resulta === 'Panalo!') {
+      if (resulta === '<span style="font-weight: bold;">&#10004;</span> Panalo! <span style="font-weight: bold;">&#10004;</span>') {
         score.wins ++;
-      } else if (resulta === 'Talo') {
+      } else if (resulta === '<span style="font-weight: bold;">&#10006;</span> Talo <span style="font-weight: bold;">&#10006;</span>') {
         score.loses ++;
       };
 
       localStorage.setItem('score', JSON.stringify(score));
 
       document.querySelector('.galawKaraKrus')
-    .innerHTML = `Tumaya ka sa ${playerMove}`;
+    .innerHTML = `Tumaya ka sa <span style="font-weight: bold;">${playerMove}</span>`;
     document.querySelector('.kalabanKaraKrus')
-    .innerHTML = `Pitik ng piso ay ${karaKrusResulta}`;
+    .innerHTML = `Pitik ng piso ay <span style="font-weight: bold;">${karaKrusResulta}</span>`;
     document.querySelector('.resultaKaraKrus')
     .innerHTML = `${resulta}`;
     updateScoreElement();

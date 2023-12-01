@@ -13,52 +13,68 @@
 
 <body>
 
-<div class="karaKrus">
+<div class="contentPage">
 
-  <p class="karaKrusTitle">Kara Krus</p>
+  <p class="karaKrusTitle"> Kara Krus</p>
+  <div class="karaKrus">
 
-  <button class="kara"
-  onclick="
-  playGame('Kara')">
-    <img class="piso" src="karaKrusPics/kara.png">
-  </button>
 
-  <button class="Krus"
-  onclick="
-  playGame('Krus')">
-    <img class="piso" src="karaKrusPics/krus.png">
-  </button>
+    
+    <div class="karaAndKrus">
+      <button class="kara"
+    onclick="
+    playGame('Kara')">
+      <img class="piso" src="karaKrusPics/kara.png">
+    </button>
+  
+    <button class="Krus"
+    onclick="
+    playGame('Krus')">
+      <img class="piso" src="karaKrusPics/krus.png">
+    </button>
+    </div>
+    
+  
+    <p class="galawKaraKrus p"><span style="font-weight: bold;">&#8679;</span> - Pumili ng Pato - <span style="font-weight: bold;">&#8679;</span></p>
+    <p class="kalabanKaraKrus p"><span style="font-weight: bold;">KARA</span> - Pitik ng Piso - <span style="font-weight: bold;">KRUS</span> </p>
+    <p class="resultaKaraKrus p"><span style="font-weight: bold;">&#10004;</span> - Resulta ng Pitik - <span style="font-weight: bold;">&#10006;</span></p>
+    <p class="iskurKaraKrus p">Iskur</p>
+  
+    <button class="iskurB" 
+    onclick="
+    score.wins = 0;
+    score.loses =  0;
+    localStorage.removeItem('score');
+  
+    updateScoreElement()
+  ">
+    Ulit Iskur
+  </button> 
+  
+  </div>
+  <p class="nameBoxTitle"> What is your name?</p>
+  <div class="textBox">
+  
+    
+  
+    <input placeholder="Name"
+    class="nameBox"
+    onkeydown="handleCostKeydown(event)">
+    <button class="submitButton"
+    onclick=nameSubmitted();
+    >Submit</button>
 
-  <p class="galawKaraKrus"></p>
-  <p class="kalabanKaraKrus"></p>
-  <p class="resultaKaraKrus"></p>
-  <p class="iskurKaraKrus"></p>
-
-  <button class="iskurB" 
-  onclick="
-  score.wins = 0;
-  score.loses =  0;
-  localStorage.removeItem('score');
-
-  updateScoreElement()
-">
-  Ulit Iskur
-</button> 
+    <div class="responses">
+      <p class="showName"></p>
+      <p class="compliment"></p>
+    </div>
+   
+  
+  </div>
 
 </div>
 
-<div class="textBox">
 
-  <input placeholder="Name"
-  class="nameBox"
-  onkeydown="handleCostKeydown(event)">
-  <button class="submitButton"
-  onclick=nameSubmitted();
-  >Submit</button>
-  <p class="showName"></p>
-  <p class="compliment"></p>
-
-</div>
 
   <script src="10-DOM-projects-karaKrus-nameBox.js"></script>
 </body>
