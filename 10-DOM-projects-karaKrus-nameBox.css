@@ -1,0 +1,37 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.karaKrus{
+  margin: 20px 20px 50px 20px;
+}
+
+.karaKrusTitle {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 20px 0px 50px 0px;
+}
+
+.Krus, .kara {
+  margin: 0px 10px;
+  border-radius: 150px;
+  padding: 30px;
+  cursor: pointer;
+  background-color: rgb(18, 212, 212);
+}
+
+.piso {
+  width: 100px;
+}
+
+.iskurB {
+  font-size: 14px;
+  border: 0px;
+  padding: 10px 15px;
+  margin-left: 140px;
+  margin-top: 50px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}

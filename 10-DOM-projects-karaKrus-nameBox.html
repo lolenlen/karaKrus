@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title> DOM Projects
+  </title>
+
+  <link rel="stylesheet" href="10-DOM-projects-karaKrus-nameBox.css">
+
+</head>
+
+<body>
+
+<div class="karaKrus">
+
+  <p class="karaKrusTitle">Kara Krus</p>
+
+  <button class="kara"
+  onclick="
+  playGame('Kara')">
+    <img class="piso" src="karaKrusPics/kara.png">
+  </button>
+
+  <button class="Krus"
+  onclick="
+  playGame('Krus')">
+    <img class="piso" src="karaKrusPics/krus.png">
+  </button>
+
+  <p class="galawKaraKrus"></p>
+  <p class="kalabanKaraKrus"></p>
+  <p class="resultaKaraKrus"></p>
+  <p class="iskurKaraKrus"></p>
+
+  <button class="iskurB" 
+  onclick="
+  score.wins = 0;
+  score.loses =  0;
+  localStorage.removeItem('score');
+
+  updateScoreElement()
+">
+  Ulit Iskur
+</button> 
+
+</div>
+
+<div class="textBox">
+
+  <input placeholder="Name"
+  class="nameBox"
+  onkeydown="handleCostKeydown(event)">
+  <button class="submitButton"
+  onclick=nameSubmitted();
+  >Submit</button>
+  <p class="showName"></p>
+
+</div>
+
+  <script src="10-DOM-projects-karaKrus-nameBox.js"></script>
+</body>
+
+
+</html>
