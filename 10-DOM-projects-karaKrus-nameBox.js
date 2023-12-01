@@ -12,43 +12,42 @@
       let userName = inputElement.value;
 
       document.querySelector('.showName')
-      .innerHTML = `Your name is ${userName}`;
+      .innerHTML = `Your name is ${userName}.`;
+  
+      function pickCompliment() {
+        const randomNumber = Math.random();
+         
+        let compliment = '';
+      
+      if (randomNumber >= 0 && randomNumber < 1/10) {
+         compliment ='Cool name dude.';
+      } else if (randomNumber >= 1/10 && randomNumber < 2/10) {
+         compliment ='Nice to meet you!';
+      } else if (randomNumber >= 2/10 && randomNumber < 3/10) {
+        compliment ='Have a great day!';
+      } else if (randomNumber >= 3/10 && randomNumber < 4/10) {
+         compliment ='ew!';
+      } else if (randomNumber >= 4/10 && randomNumber < 5/10) {
+       compliment ='oh...I am sorry for your name.';
+      } else if (randomNumber >= 5/10 && randomNumber < 6/10) {
+         compliment ='yikes.';
+      } else if (randomNumber >= 6/10 && randomNumber < 7/10) {
+       compliment ='That is a lovely name.';
+      } else if (randomNumber >= 7/10 && randomNumber < 8/10) {
+         compliment ='Your name has such a lovely sound.';
+      } else if (randomNumber >= 8/10 && randomNumber < 9/10) {
+        compliment ='I like your name.';
+      } else if (randomNumber >= 9/10 && randomNumber < 1) {
+         compliment ='Your name is so unique and special.';
+      } 
+      
+      return compliment;
+      }
+let compliments = pickCompliment();
+document.querySelector('.compliment')
+.innerHTML = `${compliments}`;
 
-        function pickCompliment() {
-                  const randomNumber = Math.random();
-                   
-                  let compliment = '';
-                
-                if (randomNumber >= 0 && randomNumber < 1/10) {
-                   compliment ='Cool name dude.';
-                } else if (randomNumber >= 1/10 && randomNumber < 2/10) {
-                   compliment ='Nice to meet you!';
-                } else if (randomNumber >= 2/10 && randomNumber < 3/10) {
-                  compliment ='Have a great day!';
-                } else if (randomNumber >= 3/10 && randomNumber < 4/10) {
-                   compliment ='ew!';
-                } else if (randomNumber >= 4/10 && randomNumber < 5/10) {
-                 compliment ='oh...I am sorry for your name.';
-                } else if (randomNumber >= 5/10 && randomNumber < 6/10) {
-                   compliment ='yikes.';
-                } else if (randomNumber >= 6/10 && randomNumber < 7/10) {
-                 compliment ='That is a lovely name.';
-                } else if (randomNumber >= 7/10 && randomNumber < 8/10) {
-                   compliment ='Your name has such a lovely sound.';
-                } else if (randomNumber >= 8/10 && randomNumber < 9/10) {
-                  compliment ='I like your name.';
-                } else if (randomNumber >= 9/10 && randomNumber < 1) {
-                   compliment ='Your name is so unique and special.';
-                } 
-                
-                return compliment;
-                }
-        let compliments = pickCompliment();
-      document.querySelector('.compliment')
-      .innerHTML = `${compliments}`;
-        
-    };
-
+};
 
 
     // xoBeman
